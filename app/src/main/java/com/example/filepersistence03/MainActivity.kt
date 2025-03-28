@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val storageRoot = Environment.getExternalStorageDirectory()
         val downloadsDir = File(storageRoot, "Download")
         val fileList = downloadsDir.listFiles()
-        val myFile = fileList?.get(0)
+        val myFile = fileList?.get(1)
         if (myFile != null && myFile.isFile) {
             val bytes = myFile.readBytes()
             val myBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
